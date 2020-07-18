@@ -10,6 +10,7 @@ const InfoBox = (props) => {
   if (props.information.labSlot) lab = "Lab :";
   if (props.information.recSlot) rec = "Rec :";
 
+  console.log(props.information);
   const includeColon = (word, classNo) => {
     if (!word) {
       return null;
@@ -20,6 +21,13 @@ const InfoBox = (props) => {
         </React.Fragment>
       );
   };
+
+  const message = (message) => {
+    if (message) {
+      return <div className="center">{message}</div>;
+    } else return null;
+  };
+
   return (
     <div
       className={`boxColour 
@@ -40,6 +48,7 @@ const InfoBox = (props) => {
         {includeColon(sec, props.information.secSlot)} {/*Sectional*/}
         {includeColon(lab, props.information.labSlot)} {/*Laboratory*/}
         {includeColon(rec, props.information.recSlot)} {/*Recitation*/}
+        {message(props.information.message)}
       </div>
     </div>
   );
