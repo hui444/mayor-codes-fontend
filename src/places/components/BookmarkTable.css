@@ -1,0 +1,39 @@
+.table-design {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 95%;
+  margin: 0 2.5%;
+  border: 1px solid #ddd;
+}
+
+th {
+  text-align: center;
+  font-size: large;
+  padding: 5px;
+  background-color: #aad091;
+}
+
+tr {
+  text-align: left;
+  font-size: medium;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #dbe8d5;
+}
+
+td {
+  padding: 5px 10px;
+}
+
+.column1-table {
+  width: 10rem;
+}
+
+.column2-table {
+  width: 20rem;
+}

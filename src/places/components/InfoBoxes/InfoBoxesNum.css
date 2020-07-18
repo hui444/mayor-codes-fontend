@@ -1,0 +1,15 @@
+.TimetableInfoPage-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BottomButtons {
+  margin-top: 2%;
+  margin-left: 15%;
+}
+
+.BottomButtons--Instructions {
+  margin-left: 13%;
+  text-align: justify;
+  max-width: 30rem;
+}

@@ -1,0 +1,30 @@
+.cusomisation {
+  text-align: center;
+  height: 25rem;
+  font-size: larger;
+  padding: 0 5px;
+}
+
+.cusomisation--modulecode {
+  font-size: 23px;
+  height: 0px;
+}
+
+.Customisation-row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Customisation-col {
+  flex: 15%;
+  max-width: 100%;
+}
+
+.customise-createButton {
+  margin-left: 85%;
+}
+
+.showClassesSet--form {
+  width: 100%;
+}

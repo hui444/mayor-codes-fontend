@@ -1,0 +1,43 @@
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.module-header {
+  padding-top: 2rem;
+  padding-left: 20%;
+  text-align: left;
+}
+
+.input-container {
+  margin-left: 25%;
+}
+
+.module-side {
+  flex: 50%;
+  max-width: 100%;
+}
+
+.overload-side {
+  flex: 50%;
+  max-width: 100%;
+  padding-top: 2%;
+}
+
+.overloading-buttons {
+  padding-left: 15%;
+}
+
+.extramodsButton {
+  padding: 3%;
+}
+
+.nextButton {
+  padding-top: 15%;
+  padding-left: 50%;
+}
+
+.bottom-nextButton {
+  padding-top: 60%;
+  padding-left: 50%;
+}

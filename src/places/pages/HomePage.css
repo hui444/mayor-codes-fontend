@@ -1,0 +1,14 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left-home,
+.right-home {
+  flex: 50%;
+  max-width: 100%;
+}
+
+.homeMain {
+  margin-top: 16%;
+}

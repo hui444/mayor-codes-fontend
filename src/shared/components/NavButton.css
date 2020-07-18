@@ -1,0 +1,115 @@
+.button {
+  font: inherit;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #ff0055;
+  border-radius: 5px;
+  background: #ff0055;
+  color: white;
+  cursor: pointer;
+  margin-right: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 1px 3px #999;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  background: #ff4382;
+  box-shadow: 1px 3px #666;
+}
+
+.button:active {
+  background: #ff4382;
+  box-shadow: 1px 3px #666;
+  transform: translateY(4px);
+}
+
+.button--inverse {
+  background: transparent;
+  color: #ff0055;
+}
+
+.button--inverse:hover,
+.button--inverse:active {
+  color: white;
+  background: #ff0055;
+}
+
+.button--danger {
+  background: #830000;
+  border-color: #830000;
+}
+
+.button--danger:hover,
+.button--danger:active {
+  background: #f34343;
+  border-color: #f34343;
+}
+
+.button--blue {
+  background: #8fbefd;
+  border-color: #8fbefd;
+  color: black;
+  padding: 1rem 1.5rem;
+}
+
+.button--blue:hover,
+.button--blue:active {
+  background: #4e94ef;
+  border-color: #4e94ef;
+}
+
+.button--cream {
+  background: #fffced;
+  border-color: #fffced;
+  color: #fc585a;
+  font-weight: bold;
+  box-shadow: 2px 3px #999;
+  font-size: larger;
+  padding: 0.5rem 5rem;
+}
+
+.button--cream:hover,
+.button--cream:active {
+  background: #ebe7d8;
+  border-color: #ebe7d8;
+  box-shadow: 2px 3px #999;
+}
+
+.button--green {
+  margin: 10px 0 0 13rem;
+  background: #e2f0da;
+  border-color: #e2f0da;
+  color: #043370;
+  font-weight: bold;
+  box-shadow: 2px 3px #999;
+  font-size: larger;
+  padding: 0.5rem 3rem;
+}
+
+.button--green:hover,
+.button--green:active {
+  background: #cad6c3;
+  border-color: #cad6c3;
+  box-shadow: 2px 3px #999;
+}
+
+.button:disabled,
+.button:hover:disabled,
+.button:active:disabled {
+  background: #ccc;
+  color: #979797;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.button--small {
+  font-size: 0.8rem;
+}
+
+.button--big {
+  font-size: 1.5rem;
+}

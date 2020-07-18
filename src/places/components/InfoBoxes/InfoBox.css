@@ -1,0 +1,51 @@
+.boxColour {
+  border: solid black 1px;
+  padding: 1.5rem;
+  margin: 0 16px 20px 18px;
+  width: 13rem;
+  height: 15rem;
+}
+
+.modulecode {
+  font-weight: bold;
+  font-size: 23px;
+  text-align: center;
+}
+
+.information {
+  padding-top: 7px;
+  text-align: left;
+  font-size: 18px;
+}
+
+.boxColour--yellow {
+  background-color: #fed86f;
+}
+
+.boxColour--blue {
+  background-color: #9ec5e4;
+}
+
+.boxColour--orange {
+  background-color: #f3b087;
+}
+
+.boxColour--green {
+  background-color: #aad091;
+}
+
+.boxColour--grey {
+  background-color: #c9c9c9;
+}
+
+.boxColour--purple {
+  background-color: #d4a9fd;
+}
+
+.boxColour--pink {
+  background-color: #f6cbd5;
+}
+
+.boxColour--brown {
+  background-color: #ead0b9;
+}
