@@ -12,10 +12,11 @@ const PushArray = (modArr, mod, compulsoryClass) => {
     modArr.push(document.getElementById(mod + "-recID").value);
   if (compulsoryClass) {
     compulsoryClass.map((classes) => {
-      modArr.push(classes);
+      return modArr.push(classes);
     });
   }
-  console.log(modArr);
+  // console.log(compulsoryClass);
+  // console.log(modArr);
 };
 
 export default PushArray;
