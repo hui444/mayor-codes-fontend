@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ClassDropDown = (props) => {
+  const [, setClassNum] = useState(
+    props.modulecode + " " + props.className + " Choose"
+  );
+
   const changeHandler = (event) => {
-    props.onChangeClass(event.target.value);
+    setClassNum(event.target.value);
   };
 
   if (props.NumberofClasses > 1) {

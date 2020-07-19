@@ -20,12 +20,17 @@ const ShowClassesSet = (props) => {
     event.preventDefault();
     setPressed(true);
 
-    PushArray(modArr1, props.items.module1);
-    PushArray(modArr2, props.items.module2);
-    PushArray(modArr3, props.items.module3);
-    PushArray(modArr4, props.items.module4);
-    PushArray(modArr5, props.items.module5);
+    PushArray(modArr1, props.items.module1, props.items.information1.classes);
+    PushArray(modArr2, props.items.module2, props.items.information2.classes);
+    PushArray(modArr3, props.items.module3, props.items.information3.classes);
+    PushArray(modArr4, props.items.module4, props.items.information4.classes);
+    PushArray(modArr5, props.items.module5, props.items.information5.classes);
 
+    console.log(modArr1);
+    console.log(modArr2);
+    console.log(modArr3);
+    console.log(modArr4);
+    console.log(modArr5);
     try {
       const req = await fetch(
         "http://localhost:5000/api/create/fiveCustomised",
