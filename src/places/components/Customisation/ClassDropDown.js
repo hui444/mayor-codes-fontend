@@ -27,11 +27,9 @@ const ClassDropDown = (props) => {
             return (
               <option
                 key={i}
-                value={
-                  props.modulecode + " " + props.className + " " + type.classNo
-                }
+                value={props.modulecode + " " + props.className + " " + type}
               >
-                {type.classNo}
+                {type}
               </option>
             );
           })}

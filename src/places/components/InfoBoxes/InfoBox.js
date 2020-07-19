@@ -10,8 +10,7 @@ const InfoBox = (props) => {
   if (props.information.labSlot) lab = "Lab :";
   if (props.information.recSlot) rec = "Rec :";
 
-  console.log(props.information);
-  const includeColon = (word, classNo) => {
+  const output = (word, classNo) => {
     if (!word) {
       return null;
     } else
@@ -43,11 +42,11 @@ const InfoBox = (props) => {
       <div className="modulecode">{props.modulecode}</div>
       <div className="information">
         <br />
-        {includeColon(tut, props.information.tutSlot)} {/*Tutorial*/}
-        {includeColon(lec, props.information.lecSlot)} {/*Lecture*/}
-        {includeColon(sec, props.information.secSlot)} {/*Sectional*/}
-        {includeColon(lab, props.information.labSlot)} {/*Laboratory*/}
-        {includeColon(rec, props.information.recSlot)} {/*Recitation*/}
+        {output(tut, props.information.tutSlot)} {/*Tutorial*/}
+        {output(lec, props.information.lecSlot)} {/*Lecture*/}
+        {output(sec, props.information.secSlot)} {/*Sectional*/}
+        {output(lab, props.information.labSlot)} {/*Laboratory*/}
+        {output(rec, props.information.recSlot)} {/*Recitation*/}
         {message(props.information.message)}
       </div>
     </div>
