@@ -3,7 +3,7 @@ import React from "react";
 import "./ShowClasses.css";
 import ShowClasses from "./ShowClasses";
 
-const ShowClassesFive = (props) => {
+const ShowClassesSix = (props) => {
   return (
     <div className="Customisation-row">
       <div className="Customisation-col">
@@ -36,8 +36,14 @@ const ShowClassesFive = (props) => {
           information={props.information5}
         />
       </div>
+      <div className="Customisation-col">
+        <ShowClasses
+          modulecode={props.module6}
+          information={props.information6}
+        />
+      </div>
     </div>
   );
 };
 
-export default ShowClassesFive;
+export default ShowClassesSix;

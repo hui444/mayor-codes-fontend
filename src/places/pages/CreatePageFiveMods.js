@@ -57,7 +57,6 @@ const CreatePageFiveMods = () => {
       });
       const res = await req.json();
       history.push(`/create/customise/${res.module._id}`);
-      // history.push(`/create/timetableInformation/${res.module._id}`);
       //redirect to new page
     } catch (err) {}
   };

@@ -3,8 +3,24 @@ import React from "react";
 import "./InfoBoxesNum.css";
 import NavButton from "../../../shared/components/NavButton";
 import InfoBox from "./InfoBox";
+import NUSModsLink from "./NUSModsLink";
 
 const SixInfoBox = (props) => {
+  let link =
+    "https://nusmods.com/timetable/sem-1/share?" +
+    NUSModsLink(props.module1, props.information1) +
+    "&" +
+    NUSModsLink(props.module2, props.information2) +
+    "&" +
+    NUSModsLink(props.module3, props.information3) +
+    "&" +
+    NUSModsLink(props.module4, props.information4) +
+    "&" +
+    NUSModsLink(props.module5, props.information5) +
+    "&" +
+    NUSModsLink(props.module6, props.information6);
+
+  console.log(link);
   return (
     <React.Fragment>
       <h2>This is the result!</h2>
@@ -53,7 +69,7 @@ const SixInfoBox = (props) => {
         </div>
       </div>
       <div className="BottomButtons">
-        <NavButton href="https://nusmods.com/timetable" target="_blank" cream>
+        <NavButton href={link} target="_blank" cream>
           Finish creating at NUSMods
         </NavButton>
         <NavButton alertBookmark green>
