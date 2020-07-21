@@ -16,6 +16,12 @@
   flex-wrap: wrap;
 }
 
+/* .Customisation-row2 {
+  min-width: 16%;
+  display: flex;
+  flex-wrap: wrap;
+} */
+
 .Customisation-col {
   flex: 15%;
   max-width: 100%;

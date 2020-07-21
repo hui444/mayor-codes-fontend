@@ -66,7 +66,7 @@ const CreatePageSevenMods = () => {
         headers: { "Content-Type": "application/json" },
       });
       const res = await req.json();
-      history.push(`/create/timetableInformation/${res.module._id}`);
+      history.push(`/create/customise/${res.module._id}`);
       //redirect to new page
     } catch (err) {}
   };

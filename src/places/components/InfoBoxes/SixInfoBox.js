@@ -20,7 +20,6 @@ const SixInfoBox = (props) => {
     "&" +
     NUSModsLink(props.module6, props.information6);
 
-  console.log(link);
   return (
     <React.Fragment>
       <h2>This is the result!</h2>
