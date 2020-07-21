@@ -24,7 +24,7 @@ const TimetableInfoPage = () => {
     fetchModuleSet();
   }, [sendRequest, timetableId]);
 
-  console.log(loadedTimetableInfo);
+  // console.log(loadedTimetableInfo);
   return (
     <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />

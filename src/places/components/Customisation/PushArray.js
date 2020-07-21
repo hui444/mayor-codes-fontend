@@ -15,8 +15,6 @@ const PushArray = (modArr, mod, compulsoryClass) => {
       return modArr.push(classes);
     });
   }
-  // console.log(compulsoryClass);
-  // console.log(modArr);
 };
 
 export default PushArray;

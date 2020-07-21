@@ -18,7 +18,6 @@ const FiveInfoBox = (props) => {
     "&" +
     NUSModsLink(props.module5, props.information5);
 
-  console.log(link);
   return (
     <React.Fragment>
       <h2>This is the result!</h2>

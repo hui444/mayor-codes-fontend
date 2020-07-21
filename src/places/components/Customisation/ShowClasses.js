@@ -4,7 +4,6 @@ import "./ShowClasses.css";
 import ShowDropDown from "./ShowDropDown";
 
 const ShowClasses = (props) => {
-  console.log(props.information);
   return (
     <div className="cusomisation">
       <div className="cusomisation--modulecode">
