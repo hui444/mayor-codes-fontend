@@ -35,6 +35,7 @@ const SubmittedEight = async (
           mod6Array: modArr6,
           mod7Array: modArr7,
           mod8Array: modArr8,
+          ranking: items.ranking,
         }),
         headers: { "Content-Type": "application/json" },
       }

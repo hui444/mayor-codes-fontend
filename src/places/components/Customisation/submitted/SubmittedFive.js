@@ -24,6 +24,7 @@ const SubmittedFive = async (
         mod3Array: modArr3,
         mod4Array: modArr4,
         mod5Array: modArr5,
+        ranking: items.ranking,
       }),
       headers: { "Content-Type": "application/json" },
     });

@@ -22,7 +22,6 @@ const SixInfoBox = (props) => {
 
   return (
     <React.Fragment>
-      <h2>This is the result!</h2>
       <div className="TimetableInfoPage-row">
         <div>
           <InfoBox
@@ -77,12 +76,14 @@ const SixInfoBox = (props) => {
       </div>
       <br />
       <div className="BottomButtons--Instructions">
-        <center>Click on this button to be directed to NUSMods.</center>
-        From there, select the classes based on the slots above to create your
-        timetable.
-        <b> To save your current timetable,</b> click on "Share/Sync" and copy
-        the link provided. Then, click on the <b>Bookmark</b> button to be
-        redirected to the Bookmark's Page.
+        <center>
+          Click on this button to be directed to NUSMods, where your timetable
+          will be reflected.
+          <br />
+          <b> To save your current timetable,</b> click on "Share/Sync" and copy
+          the link provided. Then, click on the <b>Bookmark</b> button to be
+          redirected to the Bookmark's Page.
+        </center>
       </div>
     </React.Fragment>
   );

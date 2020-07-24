@@ -38,6 +38,15 @@ form {
 }
 
 .bottom-nextButton {
-  padding-top: 60%;
+  padding-top: 43%;
   padding-left: 50%;
+}
+
+.rank-checkbox {
+  padding-left: 15%;
+  text-align: center;
+}
+
+.rank-checkbox-side {
+  padding-top: 20%;
 }

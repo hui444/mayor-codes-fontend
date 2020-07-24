@@ -24,7 +24,15 @@ const TimetableInfoPage = () => {
     fetchModuleSet();
   }, [sendRequest, timetableId]);
 
-  // console.log(loadedTimetableInfo);
+  const clashesWarning = () => {
+    if (loadedTimetableInfo && loadedTimetableInfo.clashes)
+      return (
+        <h3 className="center" style={{ color: "red" }}>
+          Do note that there are some clashes. Please manually resolve them.
+        </h3>
+      );
+  };
+
   return (
     <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />
@@ -34,7 +42,11 @@ const TimetableInfoPage = () => {
         </div>
       )}
       {!isLoading && loadedTimetableInfo && (
-        <InfoBoxSet items={loadedTimetableInfo} />
+        <div>
+          <h2>This is the result!</h2>
+          {clashesWarning()}
+          <InfoBoxSet items={loadedTimetableInfo} />
+        </div>
       )}
     </React.Fragment>
   );
