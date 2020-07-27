@@ -1,16 +1,35 @@
 # mayor-codes
-24may homepage done, with NUSPlanner banner, and 'CREATE' & 'BOOKMARK'
 
-25may changed the links to back of card, made a home button (but not deleted when at home page, it is hidden - transparent), made a table in bookmarks page and changed the colours of both create and bookmarks page
+Instructions on how to use:
 
-27may reorganised codes, home button issue fixed, made the links in bookmarks page actual links, made text boxes, questions with radio buttons and create button in create page.
+--------------------------------------------------HOME PAGE---------------------------------------------------------
 
-28may resolved warnings
+o Hovering over the Create flip card will reveal the instructions on how to use the CREATE page.
 
-30may changed button colour, reorganised codes, added create feature (dropdown to select number of modules & textboxes), changed links to description and timetable names are now hyperlinks. 
-added a file named HoverDescription that allows a description to appear when the cursor hovers over text - but it is unused.
+o Hovering over the Bookmark flip card will reveal the instructions on how to use the BOOKMARK page.
 
-31may changed NavButton code, made a InputBox for moduleinputboxes;
-removed preferencesQ (unused), form validation for modules and onSubmit, an array of text (capitalised) is sent through console.log
+o Clicking the Create card will redirect you to the CREATE page, while clicking the Bookmark card will redirect you to the BOOKMARK page.
 
-1jun combined codes; made add and edit buttons but cannot save, add button shows a pop up form but not sent to backend yet
+-------------------------------------------------CREATE PAGE--------------------------------------------------------
+
+o Select the number of modules you desire to input.
+
+o Input the desired modules and click NEXT to be redirected the the PREFERENCE page.
+
+------------------------------------------------PREFERENCE PAGE----------------------------------------------------
+
+o If you wish to lock in any preferred slots, click on the drop down bar to select your preferred slots. Click CREATE to be redirected to the TIMETABLE INFO/LINK page.
+
+-------------------------------------------------TIMETABLE PAGE-----------------------------------------------------
+
+o Your timetable information will be displayed in separate boxes.
+
+o Click FINISH CREATING AT NUSMODS to see your finished timetable at the NUSMods website. You can make any changes on NUSMods if you wish to.
+
+o Click BOOKMARK to be redirected to the BOOKMARK page.
+
+--------------------------------------------------BOOKMARK PAGE-----------------------------------------------------
+
+o Copy the NUSMods link and paste it into the Timetable Link portion of the form. Fill in the rest of the form with the modules chosen and a name. Click SUBMIT to store your timetable in the table below.
+
+o The SUBMIT button will be disabled if "Timetable name", "Modules taken" and "Timetable Link" are not filled up. "Timetable Link" must have the words "nusmods" to be considered valid.
