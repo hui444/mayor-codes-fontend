@@ -9,7 +9,6 @@ import { useForm } from "../../shared/hooks/form-hook";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import ErrorModal from "../../shared/components/ErrorModal";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
-import { Checkbox } from "antd";
 
 const CreatePageSixMods = () => {
   const { isLoading, error, clearError } = useHttpClient();
@@ -58,7 +57,6 @@ const CreatePageSixMods = () => {
           module4: formState.inputs.mod4.value,
           module5: formState.inputs.mod5.value,
           module6: formState.inputs.mod6.value,
-          ranking: document.getElementById("ranking").checked,
         }),
         headers: { "Content-Type": "application/json" },
       });
@@ -139,14 +137,6 @@ const CreatePageSixMods = () => {
         {isLoading && <LoadingSpinner asOverlay />}
         <div className="module-side">{ModuleInputs()}</div>
         <div className="overload-side">
-          <div className="rank-checkbox-side">
-            <br />
-            <Checkbox id="ranking">
-              {" "}
-              Rank my first module as <b>most</b> important (last module as
-              least important)
-            </Checkbox>
-          </div>
           <div className="bottom-nextButton">
             <NavButton type="submit" disabled={!formState.isValid}>
               NEXT

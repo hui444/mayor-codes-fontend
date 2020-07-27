@@ -9,7 +9,6 @@ import { useForm } from "../../shared/hooks/form-hook";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import ErrorModal from "../../shared/components/ErrorModal";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
-import { Checkbox } from "antd";
 
 const CreatePageFiveMods = () => {
   const { isLoading, error, clearError } = useHttpClient();
@@ -33,7 +32,7 @@ const CreatePageFiveMods = () => {
         isValid: false,
       },
       mod5: {
-        value: "false",
+        value: "",
         isValid: false,
       },
     },
@@ -44,8 +43,6 @@ const CreatePageFiveMods = () => {
 
   const createHandler = async (event) => {
     event.preventDefault();
-    console.log(formState.inputs);
-    console.log(document.getElementById("ranking").checked);
     try {
       const req = await fetch("http://localhost:5000/api/create/five", {
         method: "POST",
@@ -55,7 +52,6 @@ const CreatePageFiveMods = () => {
           module3: formState.inputs.mod3.value,
           module4: formState.inputs.mod4.value,
           module5: formState.inputs.mod5.value,
-          ranking: document.getElementById("ranking").checked,
         }),
         headers: { "Content-Type": "application/json" },
       });
@@ -125,17 +121,7 @@ const CreatePageFiveMods = () => {
       <ErrorModal error={error} onClear={clearError} />
       <form action="" id="form" onSubmit={createHandler}>
         {isLoading && <LoadingSpinner asOverlay />}
-        <div className="module-side">
-          {ModuleInputs()}
-          <div className="rank-checkbox">
-            <br />
-            <Checkbox id="ranking">
-              {" "}
-              Rank my first module as <b>most</b> important (last module as
-              least important)
-            </Checkbox>
-          </div>
-        </div>
+        <div className="module-side">{ModuleInputs()}</div>
         <div className="overload-side">
           <h3>
             Please click on one of these buttons if you have more than five

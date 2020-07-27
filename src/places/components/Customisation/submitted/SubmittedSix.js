@@ -27,7 +27,6 @@ const SubmittedSix = async (
         mod4Array: modArr4,
         mod5Array: modArr5,
         mod6Array: modArr6,
-        ranking: items.ranking,
       }),
       headers: { "Content-Type": "application/json" },
     });
