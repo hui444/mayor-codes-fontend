@@ -35,7 +35,7 @@ const CustomisePage = () => {
 
       {!isLoading && loadedModuleSet && (
         <div>
-          <h2>This is to customise your timetable.</h2>
+          <h2 className="center">This is to customise your timetable.</h2>
           <li className="center">
             Select your desired/required timeslots for each Module and click on
             'CREATE' to proceed.

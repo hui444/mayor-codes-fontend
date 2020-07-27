@@ -13,3 +13,16 @@
   text-align: justify;
   max-width: 30rem;
 }
+
+.words {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.clipboard-bar {
+  margin: 0 12.5%;
+}
+
+.link-button {
+  margin-left: 31%;
+}

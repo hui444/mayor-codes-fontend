@@ -43,7 +43,7 @@ const TimetableInfoPage = () => {
       )}
       {!isLoading && loadedTimetableInfo && (
         <div>
-          <h2>This is the result!</h2>
+          <h2 className="center">This is the result!</h2>
           {clashesWarning()}
           <InfoBoxSet items={loadedTimetableInfo} />
         </div>

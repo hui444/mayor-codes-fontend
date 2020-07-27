@@ -1,30 +1,15 @@
-h2 {
+.BookmarkPage {
   text-align: center;
 }
 
-.add-edit-buttons {
-  margin-left: 80%;
+.BookmarkPage-intro {
+  font-size: large;
 }
 
-.divider {
-  width: 10px;
-  display: inline-block;
+.submitbutton {
+  margin-left: 50rem;
 }
 
-@media (max-width: 1097px) {
-  .add-edit-buttons {
-    margin-left: 78%;
-  }
-}
-
-@media (max-width: 997px) {
-  .add-edit-buttons {
-    margin-left: 75%;
-  }
-}
-
-@media (max-width: 879px) {
-  .add-edit-buttons {
-    margin-left: 5%;
-  }
+.form {
+  margin-left: 15rem;
 }
