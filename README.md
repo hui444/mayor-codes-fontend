@@ -26,6 +26,8 @@ o Your timetable information will be displayed in separate boxes.
 
 o Click FINISH CREATING AT NUSMODS to see your finished timetable at the NUSMods website. You can make any changes on NUSMods if you wish to.
 
+o Click COPY LINK to copy the link of the generated timetable.
+
 o Click BOOKMARK to be redirected to the BOOKMARK page.
 
 --------------------------------------------------BOOKMARK PAGE-----------------------------------------------------
