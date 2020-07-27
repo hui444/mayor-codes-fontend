@@ -1,4 +1,5 @@
 # NUSPlanner
+This is the frontend code of the NUSPlanner website.
 This project is a Web-based tool designed to help students create and keep track of their favourite timetables according to the modules and preferences they choose.
 
 ## Getting Started
