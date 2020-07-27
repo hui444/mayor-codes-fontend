@@ -32,7 +32,7 @@ const ShowDropDown = (props) => {
       <React.Fragment>
         <br />
         <br />
-        No customisation avaiable, all slots are allocated.
+        No customisation available, all slots are allocated.
       </React.Fragment>
     );
   } else
