@@ -1,4 +1,5 @@
 import React from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import "./InfoBoxesNum.css";
 import NavButton from "../../../shared/components/NavButton";
@@ -17,6 +18,10 @@ const FiveInfoBox = (props) => {
     NUSModsLink(props.module4, props.information4) +
     "&" +
     NUSModsLink(props.module5, props.information5);
+
+  const clicked = () => {
+    alert("Copied link to clipboard");
+  };
 
   return (
     <React.Fragment>
@@ -66,15 +71,27 @@ const FiveInfoBox = (props) => {
         </NavButton>
       </div>
       <br />
-      <div className="BottomButtons--Instructions">
-        <center>
-          Click on this button to be directed to NUSMods, where your timetable
-          will be reflected.
+      <div className="words">
+        <div className="BottomButtons--Instructions">
+          <center>
+            Click on this button to be directed to NUSMods, where your timetable
+            will be reflected.
+            <br />
+            <b> To save your current timetable,</b> click on "Share/Sync" and
+            copy the link provided. Then, click on the <b>Bookmark</b> button to
+            be redirected to the Bookmark's Page.
+          </center>
+        </div>
+        <div className="clipboard-bar">
+          or Click "Copy Link" to copy given link
           <br />
-          <b> To save your current timetable,</b> click on "Share/Sync" and copy
-          the link provided. Then, click on the <b>Bookmark</b> button to be
-          redirected to the Bookmark's Page.
-        </center>
+          <br />
+          <div className="link-button">
+            <CopyToClipboard text={link}>
+              <NavButton onClick={clicked}>Copy Link</NavButton>
+            </CopyToClipboard>
+          </div>
+        </div>
       </div>
     </React.Fragment>
   );

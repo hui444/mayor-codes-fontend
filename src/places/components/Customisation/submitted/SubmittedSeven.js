@@ -37,7 +37,6 @@ const SubmittedSeven = async (
       }
     );
     const res = await req.json();
-    console.log(res);
     history.push(`/create/timetableInformation/${res.customModule._id}`);
     //redirect to new page
   } catch (err) {}

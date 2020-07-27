@@ -1,33 +1,82 @@
-import React from "react";
+import React, { Component } from "react";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 
-import BookmarkTable from "../components/BookmarkTable";
 import "./BookmarkPage.css";
-import Form from "../components/Form";
-import NavButton from "../../shared/components/NavButton";
+import BookmarkForm from "./BookmarkForm";
+import Table from "./Table";
+import SimpleStorage from "react-simple-storage";
 
-const ContentEditable = () => {
-  var x = document.getElementById("myBookmarks");
-  x.contentEditable = true;
-};
-
-const BookmarkPage = () => {
-  const FormPopup = () => {
-    document.getElementById("myForm").style.display = "block";
+class BookmarkPage extends Component {
+  state = {
+    data: [],
+    editIdx: -1,
   };
 
-  return (
-    <React.Fragment>
-      <div className="bookmark-page">
-        <h2>Your Timetables</h2>
-        <BookmarkTable /> <br /> <Form />
-        <div className="add-edit-buttons">
-          <NavButton onClick={FormPopup}>ADD</NavButton>
-          <div className="divider" />
-          <NavButton onClick={ContentEditable}>EDIT</NavButton>
+  handleRemove = (i) => {
+    this.setState((state) => ({
+      data: state.data.filter((row, j) => j !== i),
+    }));
+  };
+
+  startEditing = (i) => {
+    this.setState({ editIdx: i });
+  };
+
+  stopEditing = () => {
+    this.setState({ editIdx: -1 });
+  };
+
+  handleChange = (e, name, i) => {
+    const { value } = e.target;
+    this.setState((state) => ({
+      data: state.data.map((row, j) =>
+        j === i ? { ...row, [name]: value } : row
+      ),
+    }));
+  };
+
+  render() {
+    return (
+      <MuiThemeProvider>
+        <SimpleStorage parent={this} />
+        <div>
+          <div className="form">
+            <BookmarkForm
+              onSubmit={(submission) =>
+                this.setState({
+                  data: [...this.state.data, submission],
+                })
+              }
+            />
+          </div>
+
+          <br />
+          <Table
+            handleRemove={this.handleRemove}
+            startEditing={this.startEditing}
+            editIdx={this.state.editIdx}
+            stopEditing={this.stopEditing}
+            handleChange={this.handleChange}
+            data={this.state.data}
+            header={[
+              {
+                name: "Title",
+                prop: "title",
+              },
+              {
+                name: "Timetable Link",
+                prop: "link",
+              },
+              {
+                name: "Modules taken",
+                prop: "modules",
+              },
+            ]}
+          />
         </div>
-      </div>
-    </React.Fragment>
-  );
-};
+      </MuiThemeProvider>
+    );
+  }
+}
 
 export default BookmarkPage;
