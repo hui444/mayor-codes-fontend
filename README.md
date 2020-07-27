@@ -1,6 +1,17 @@
-# mayor-codes
+# NUSPlanner
+This project is a Web-based tool designed to help students create and keep track of their favourite timetables according to the modules and preferences they choose.
 
-Instructions on how to use:
+## Getting Started
+1. Install Visual Studio Code
+2. Download both front and back end codes
+3. Open both codes on Visual Studio Code
+4. Run commands 
+   ```npm install```
+   and 
+   ```npm start```
+   on both terminals
+
+## Instructions on how to use NUSPlanner:
 
 -----------------------------------------------HOME PAGE------------------------------------------------------
 
@@ -36,5 +47,16 @@ o Copy the NUSMods link and paste it into the Timetable Link portion of the form
 
 o The SUBMIT button will be disabled if "Timetable name", "Modules taken" and "Timetable Link" are not filled up. "Timetable Link" must have the words "nusmods" to be considered valid.
 
+## Built with
+* MongoDB
+* Express.js
+* React.js
+* Node.js
 
+## Mayors
+* Fang Hui Hui  
+* Lee Shu Ling
 
+## Acknowledgement
+* Udemy.com (Academind by Maximilian Schwarzmüller)
+* Fang Pin Sern aka Benedict
