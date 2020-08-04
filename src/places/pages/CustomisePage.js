@@ -6,6 +6,7 @@ import ShowClassesSet from "../components/Customisation/ShowClassesSet";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import ErrorModal from "../../shared/components/ErrorModal";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
+import { backendURL } from "../../url";
 
 const CustomisePage = () => {
   const [loadedModuleSet, setLoadedModuleSet] = useState();
@@ -16,7 +17,7 @@ const CustomisePage = () => {
     const fetchModuleSet = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/create/${setModulesId}`
+          `${backendURL}/api/create/${setModulesId}`
         );
         setLoadedModuleSet(responseData.setModules);
       } catch (err) {}

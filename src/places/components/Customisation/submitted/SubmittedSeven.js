@@ -1,4 +1,5 @@
 import PushArray from "../PushArray";
+import { backendURL } from "../../../../url";
 
 const SubmittedSeven = async (
   modArr1,
@@ -20,22 +21,19 @@ const SubmittedSeven = async (
   PushArray(modArr7, items.module7, items.information7.classes);
 
   try {
-    const req = await fetch(
-      "http://localhost:5000/api/create/sevenCustomised",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          mod1Array: modArr1,
-          mod2Array: modArr2,
-          mod3Array: modArr3,
-          mod4Array: modArr4,
-          mod5Array: modArr5,
-          mod6Array: modArr6,
-          mod7Array: modArr7,
-        }),
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    const req = await fetch(backendURL + "/api/create/sevenCustomised", {
+      method: "POST",
+      body: JSON.stringify({
+        mod1Array: modArr1,
+        mod2Array: modArr2,
+        mod3Array: modArr3,
+        mod4Array: modArr4,
+        mod5Array: modArr5,
+        mod6Array: modArr6,
+        mod7Array: modArr7,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
     const res = await req.json();
     history.push(`/create/timetableInformation/${res.customModule._id}`);
     //redirect to new page

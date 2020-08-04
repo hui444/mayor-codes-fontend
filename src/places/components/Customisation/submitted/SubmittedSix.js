@@ -1,4 +1,5 @@
 import PushArray from "../PushArray";
+import { backendURL } from "../../../../url";
 
 const SubmittedSix = async (
   modArr1,
@@ -18,7 +19,7 @@ const SubmittedSix = async (
   PushArray(modArr6, items.module6, items.information6.classes);
 
   try {
-    const req = await fetch("http://localhost:5000/api/create/sixCustomised", {
+    const req = await fetch(backendURL + "/api/create/sixCustomised", {
       method: "POST",
       body: JSON.stringify({
         mod1Array: modArr1,

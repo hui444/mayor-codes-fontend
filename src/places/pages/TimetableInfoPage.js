@@ -5,6 +5,7 @@ import InfoBoxSet from "../components/InfoBoxes/InfoBoxSet";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import ErrorModal from "../../shared/components/ErrorModal";
 import LoadingSpinner from "../../shared/components/LoadingSpinner";
+import { backendURL } from "../../url";
 
 const TimetableInfoPage = () => {
   const [loadedTimetableInfo, setLoadedTimetableInfo] = useState();
@@ -16,7 +17,7 @@ const TimetableInfoPage = () => {
     const fetchModuleSet = async () => {
       try {
         const responseData = await sendRequest(
-          `http://localhost:5000/api/create/results/${timetableId}`
+          `${backendURL}/api/create/results/${timetableId}`
         );
         setLoadedTimetableInfo(responseData.timetableInfo);
       } catch (err) {}

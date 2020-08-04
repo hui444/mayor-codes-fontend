@@ -1,4 +1,5 @@
 import PushArray from "../PushArray";
+import { backendURL } from "../../../../url";
 
 const SubmittedEight = async (
   modArr1,
@@ -22,23 +23,20 @@ const SubmittedEight = async (
   PushArray(modArr8, items.module8, items.information8.classes);
 
   try {
-    const req = await fetch(
-      "http://localhost:5000/api/create/eightCustomised",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          mod1Array: modArr1,
-          mod2Array: modArr2,
-          mod3Array: modArr3,
-          mod4Array: modArr4,
-          mod5Array: modArr5,
-          mod6Array: modArr6,
-          mod7Array: modArr7,
-          mod8Array: modArr8,
-        }),
-        headers: { "Content-Type": "application/json" },
-      }
-    );
+    const req = await fetch(backendURL + "/api/create/eightCustomised", {
+      method: "POST",
+      body: JSON.stringify({
+        mod1Array: modArr1,
+        mod2Array: modArr2,
+        mod3Array: modArr3,
+        mod4Array: modArr4,
+        mod5Array: modArr5,
+        mod6Array: modArr6,
+        mod7Array: modArr7,
+        mod8Array: modArr8,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
     const res = await req.json();
     history.push(`/create/timetableInformation/${res.customModule._id}`);
     //redirect to new page
