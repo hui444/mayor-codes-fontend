@@ -8,7 +8,7 @@ import {
 
 import NUSPlannerHeader from "./shared/components/NUSPlannerHeader";
 import HomePage from "./places/pages/HomePage";
-import LoadingSpinner from "./src/shared/components/LoadingSpinner";
+import LoadingSpinner from "./shared/components/LoadingSpinner";
 // import CreatePageFiveMods from "./places/pages/CreatePageFiveMods";
 // import BookmarkPage from "./places/pages/BookmarkPage";
 // import NavButton from "./shared/components/NavButton";
