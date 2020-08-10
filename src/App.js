@@ -9,19 +9,17 @@ import {
 import NUSPlannerHeader from "./shared/components/NUSPlannerHeader";
 import HomePage from "./places/pages/HomePage";
 import LoadingSpinner from "./shared/components/LoadingSpinner";
-// import CreatePageFiveMods from "./places/pages/CreatePageFiveMods";
-// import BookmarkPage from "./places/pages/BookmarkPage";
 // import NavButton from "./shared/components/NavButton";
+// import BookmarkPage from "./places/pages/BookmarkPage";
+// import CreatePageFiveMods from "./places/pages/CreatePageFiveMods";
 // import CreatePageSixMods from "./places/pages/CreatePageSixMods";
 // import CreatePageSevenMods from "./places/pages/CreatePageSevenMods";
 // import CreatePageEightMods from "./places/pages/CreatePageEightMods";
+// import CustomisePage from "./places/pages/CustomisePage";
 // import TimetableInfoPage from "./places/pages/TimetableInfoPage";
 
-const NavButton = React.lazy(() => import("./shared/components/NavButton"));
 const BookmarkPage = React.lazy(() => import("./places/pages/BookmarkPage"));
-const TimetableInfoPage = React.lazy(() =>
-  import("./places/pages/TimetableInfoPage")
-);
+const NavButton = React.lazy(() => import("./shared/components/NavButton"));
 const CreatePageFiveMods = React.lazy(() =>
   import("./places/pages/CreatePageFiveMods")
 );
@@ -34,6 +32,10 @@ const CreatePageSevenMods = React.lazy(() =>
 const CreatePageEightMods = React.lazy(() =>
   import("./places/pages/CreatePageEightMods")
 );
+const TimetableInfoPage = React.lazy(() =>
+  import("./places/pages/TimetableInfoPage")
+);
+const CustomisePage = React.lazy(() => import("./places/pages/CustomisePage"));
 
 const App = () => {
   return (
@@ -84,7 +86,15 @@ const App = () => {
               <style>{"body { background-color : #dae3f2; }"}</style>
             </Route>
 
-            <Route path="/create/timetableInformation/:setModulesId">
+            <Route path="/create/customise/:setModulesId">
+              <NUSPlannerHeader>
+                <NavButton alertHome>HOME</NavButton>
+              </NUSPlannerHeader>
+              <CustomisePage />
+              <style>{"body { background-color : #dae3f2; }"}</style>
+            </Route>
+
+            <Route path="/create/timetableInformation/:timetableId">
               <NUSPlannerHeader>
                 <NavButton alertHome>HOME</NavButton>
               </NUSPlannerHeader>
