@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import "./CreatePageMods.css";
@@ -13,6 +13,8 @@ import { backendURL } from "../../url";
 
 const CreatePageFiveMods = () => {
   const { isLoading, error, clearError } = useHttpClient();
+
+  const [NEXTisLoading, setNEXTisLoading] = useState(false);
 
   const [formState, inputHandler] = useForm(
     {
@@ -43,6 +45,7 @@ const CreatePageFiveMods = () => {
   const history = useHistory();
 
   const createHandler = async (event) => {
+    setNEXTisLoading(true);
     event.preventDefault();
     try {
       console.log(backendURL + "/api/create/five");
@@ -123,6 +126,7 @@ const CreatePageFiveMods = () => {
       <ErrorModal error={error} onClear={clearError} />
       <form action="" id="form" onSubmit={createHandler}>
         {isLoading && <LoadingSpinner asOverlay />}
+        {NEXTisLoading && <LoadingSpinner loading />}
         <div className="module-side">{ModuleInputs()}</div>
         <div className="overload-side">
           <h3>

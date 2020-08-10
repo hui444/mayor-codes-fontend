@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./ShowClasses.css";
 import ShowClassesFive from "./ShowClassesFive";
@@ -11,6 +11,7 @@ import SubmittedSix from "./submitted/SubmittedSix";
 import SubmittedSeven from "./submitted/SubmittedSeven";
 import SubmittedEight from "./submitted/SubmittedEight";
 import { useHistory } from "react-router-dom";
+import LoadingSpinner from "../../../shared/components/LoadingSpinner";
 
 const ShowClassesSet = (props) => {
   const modArr1 = [],
@@ -24,7 +25,10 @@ const ShowClassesSet = (props) => {
 
   const history = useHistory();
 
+  const [NEXTisLoading, setNEXTisLoading] = useState(false);
+
   const submitted = async (event) => {
+    setNEXTisLoading(true);
     event.preventDefault();
 
     if (props.items.number === 5)
@@ -78,6 +82,7 @@ const ShowClassesSet = (props) => {
   if (props.items.number === 5) {
     return (
       <form className="showClassesSet--form" onSubmit={submitted}>
+        {NEXTisLoading && <LoadingSpinner loading />}
         <ShowClassesFive
           module1={props.items.module1}
           module2={props.items.module2}
@@ -99,6 +104,7 @@ const ShowClassesSet = (props) => {
   if (props.items.number === 6) {
     return (
       <form className="showClassesSet--form" onSubmit={submitted}>
+        {NEXTisLoading && <LoadingSpinner loading />}
         <ShowClassesSix
           module1={props.items.module1}
           module2={props.items.module2}
@@ -122,6 +128,7 @@ const ShowClassesSet = (props) => {
   if (props.items.number === 7) {
     return (
       <form className="showClassesSet--form" onSubmit={submitted}>
+        {NEXTisLoading && <LoadingSpinner loading />}
         <ShowClassesSeven
           module1={props.items.module1}
           module2={props.items.module2}
@@ -147,6 +154,7 @@ const ShowClassesSet = (props) => {
   if (props.items.number === 8) {
     return (
       <form className="showClassesSet--form" onSubmit={submitted}>
+        {NEXTisLoading && <LoadingSpinner loading />}
         <ShowClassesEight
           module1={props.items.module1}
           module2={props.items.module2}
